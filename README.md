@@ -20,9 +20,9 @@ f7f5169b0af8        ethereum/client-go:latest   "geth"              About a minu
 docker exec -it <container name> /bin/sh
 ```
 
-3. Connect to the already started "geth" process:
+3. Connect to the already started "geth" process with **geth attach**:
 ```
-**# geth attach**
+# geth attach
 Welcome to the Geth JavaScript console!
 
 instance: Geth/v1.8.0-unstable-b4e05adc/linux-amd64/go1.9.3
