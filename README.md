@@ -3,7 +3,7 @@ Ethereum SetUp
 
 1. Run the following image:
 ```
-docker run -d ethereum/client-go:latest
+docker run -d ethereum/client-go:latest -name eth-ropsen --networkid 3 -v /Users/glenn/Dev/ethereum:/root/.ethereum ethereum/client-go
 ```
 
 The TCP PORTS exposed for RPC will be 8545:
@@ -18,6 +18,17 @@ f7f5169b0af8        ethereum/client-go:latest   "geth"              About a minu
 
 ```
 docker exec -it <container name> /bin/sh
+```
+
+
+To connect to the Ropsen test network:
+```
+geth --networkid 3
+```
+
+Persist the block chain with volume:
+```
+docker run -it -p 30303:30303 -v /path/on/host:/root/.ethereum ethereum/client-go
 ```
 
 3. Connect to the already started "geth" process with **geth attach**:
