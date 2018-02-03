@@ -15,5 +15,19 @@ f7f5169b0af8        ethereum/client-go:latest   "geth"              About a minu
 ```
 
 2. Connect to the shell to interact
+
+```
+docker exec -it <container name> /bin/sh
+```
+
+3. Connect to the already started "geth" process:
+```
+**# geth attach**
+Welcome to the Geth JavaScript console!
+
+instance: Geth/v1.8.0-unstable-b4e05adc/linux-amd64/go1.9.3
+ modules: admin:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0
+
+>
 ### References
 * https://geth.ethereum.org/install/#run-inside-docker-container
